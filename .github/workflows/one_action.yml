@@ -7,3 +7,7 @@ jobs:
     steps:
       - name: Display Hello Message
         run: echo "Hello GitHub Action!"
+      - name: Display Command in Multiline
+        run: |
+          node -v
+          git -v
