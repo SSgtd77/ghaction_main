@@ -14,6 +14,7 @@ jobs:
         run: git -v
   run-comand-two:
     runs-on: macos-latest
+    needs: run-comand-one
     steps:
       - name: Display Git Version in MacOS
         run: git -v
