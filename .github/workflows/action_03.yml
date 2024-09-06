@@ -1,0 +1,11 @@
+name: Third WorkFlow
+on: [push]
+
+jobs:
+  run-command-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Folder
+        run: |
+          pwd
+          ls -la
