@@ -5,7 +5,8 @@ jobs:
   run-command-one:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Folder
-        run: |
-          pwd
-          ls -la
+      - name: Display files and Copy Repo
+        run: ls -la
+      - uses: actions/checkout@v4
+      - name: Display files after Copy
+        run: ls -la
