@@ -1,0 +1,19 @@
+name: Second WorkFlow
+on: [push]
+
+jobs:
+  run-comand-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Git Version in Ubunty
+        run: git -v
+  run-comand-parallel:
+    runs-on: windows-latest
+    steps:
+      - name: Display Git Version in Windows
+        run: git -v
+  run-comand-two:
+    runs-on: macos-latest
+    steps:
+      - name: Display Git Version in MacOS
+        run: git -v
