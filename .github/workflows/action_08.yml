@@ -1,13 +1,18 @@
 name: Eighth WorkFlow
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Input the Title
+        type: string
+        required: true
+        default: "Title default"
 
 jobs:
   run-command-one:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Event Var
-        run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REF
+      - name: Display Title
+        run: | 
+          echo "Title: ${{ inputs.titleCustom }}"
   
