@@ -1,0 +1,24 @@
+name: Sixth WorkFlow
+on:
+  push:
+    branches:
+      - main
+      - "text/*" # text/todo text/faq text/help
+      - "text/**" # text/todo/one
+      - "!page/blog"
+    # branches-ignore:
+    #   - "page/blog"
+    tags:
+      - v1.* # v1.1, v1.1.2
+      - "!v1.2.1"
+    paths:
+      - "**.txt"
+
+jobs:
+  run-command-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Event Vars
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
