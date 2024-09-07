@@ -17,6 +17,6 @@ jobs:
           echo $GITHUB_REF
           echo '${{ github.ref }}'
           echo $WF_CUSTOM_VAR
-          echo '${{ github.WF_CUSTOM_VAR }}'
+          echo '${{ env.WF_CUSTOM_VAR }}'
           echo $JOB_CUSTOM_VAR
           echo $STEP_CUSTOM_VAR
