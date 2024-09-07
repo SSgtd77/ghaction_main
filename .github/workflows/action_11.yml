@@ -1,0 +1,22 @@
+name: Eleventh WorkFlow
+on: [push]
+env:
+  WF_CUSTOM_VAR: WF1
+
+jobs:
+  run-command-one:
+    runs-on: ubuntu-latest
+    env:
+      JOB_CUSTOM_VAR: JOB1
+    steps:
+      - name: Vars
+        env:
+          STEP_CUSTOM_VAR: ST1
+          WF_CUSTOM_VAR: WF1 + ST2
+        run: |
+          echo $GITHUB_REF
+          echo '${{ github.ref }}'
+          echo $WF_CUSTOM_VAR
+          echo '${{ github.WF_CUSTOM_VAR }}'
+          echo $JOB_CUSTOM_VAR
+          echo $STEP_CUSTOM_VAR
