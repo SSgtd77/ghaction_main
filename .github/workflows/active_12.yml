@@ -17,3 +17,11 @@ jobs:
         run: |
           echo '${{ vars.STATUS }}'
           echo '${{ secrets.PASSWORD }}'
+  run-command-three:
+    runs-on: ubuntu-latest
+    environment: "staging"
+    steps:
+      - name: Staging Vars and Secrests
+        run: |
+          echo '${{ vars.STATUS }}'
+          echo '${{ secrets.PASSWORD }}'
