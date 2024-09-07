@@ -1,0 +1,19 @@
+name: Seventeenth WorkFlow
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Custom Title"
+        type: string
+        default: "Testing text title"
+        required: false
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/reusable_workflow.yml
+    with:
+      title: ${{ inputs.title }}
+  call-external-workflow:
+    uses: SSgtd77/workflows/.github/workflows/workflow.yml@main
+    secrets:
+      PASSWORD: ${{ secrets.PASSWORD }}
