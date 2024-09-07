@@ -5,8 +5,8 @@ jobs:
   docker-test:
     runs-on: ubuntu-latest
     container:
-      # image: node:22-alpine3.19
-      image: node:14
+      image: node:22-alpine3.19
+      # image: node:14
       env:
         NODE_ENV: development
       ports:
