@@ -15,7 +15,11 @@ jobs:
       #   - docker_volumes:/volumes
       # options: --cpus 1
     steps:
-      - name: Display Node Version
+      - name: Display Node and OS Version
         run: | 
           node -v
           cat /etc/os-release
+      - name: Display New Node
+        uses: docker://node:18-alpine3.19
+        with:
+          args: -v
