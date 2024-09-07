@@ -18,4 +18,4 @@ jobs:
       - name: Display Node Version
         run: | 
           node -v
-          cat /etc/os-relese
+          cat /etc/os-release
