@@ -9,7 +9,12 @@ jobs:
         node-version: [12, 14, 18]
     runs-on: ${{ matrix.os }}
     steps:
-      - run: echo "$RUNNER_OS"
+      - name: windows
+        if: runner.os == 'Windows'
+        run: echo "The operating system -> $env:RUNNER_OS."
+      - name: not-windows
+        if: runner.os != 'Windows'
+        run: echo "The operating system -> $RUNNER_OS."
       - run: node -v
       - uses: actions/setup-node@v4
         with:
