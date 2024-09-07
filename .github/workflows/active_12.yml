@@ -5,7 +5,15 @@ jobs:
   run-command-one:
     runs-on: ubuntu-latest
     steps:
-      - name: Our Vars and Secrests
+      - name: Main Vars and Secrests
+        run: |
+          echo '${{ vars.STATUS }}'
+          echo '${{ secrets.PASSWORD }}'
+  run-command-two:
+    runs-on: ubuntu-latest
+    environment: "production"
+    steps:
+      - name: Production Vars and Secrests
         run: |
           echo '${{ vars.STATUS }}'
           echo '${{ secrets.PASSWORD }}'
