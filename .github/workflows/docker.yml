@@ -16,4 +16,6 @@ jobs:
       # options: --cpus 1
     steps:
       - name: Display Node Version
-        run: node -v
+        run: | 
+          node -v
+          cat /etc/os-relese
