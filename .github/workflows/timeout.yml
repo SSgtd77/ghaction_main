@@ -1,0 +1,10 @@
+name: Timeout Test
+on: push
+
+jobs:
+  test-timeout:
+    runs-on: ububntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Sleep Action
+        run: sleep 100
