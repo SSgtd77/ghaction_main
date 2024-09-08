@@ -4,7 +4,8 @@ on: push
 jobs:
   test-timeout:
     runs-on: ububntu-latest
-    timeout-minutes: 1
+    # timeout-minutes: 1
     steps:
       - name: Sleep Action
-        run: sleep 100
+        run: sleep 200
+        timeout-minutes: 1
